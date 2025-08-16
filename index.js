@@ -3,12 +3,13 @@ document.querySelector('#push').onclick = function(){
         alert("Please enter a book");
     }
     else{
-        document.querySelector('#push').innerHTML += `
-            <div id="book">
-                <span id="bookname">
+        document.querySelector('#push').onclick = function(){
+            const divEle = document.getElementById("PLACEHERE");
+            divEle.innerHTML += `
+                <span id="book">
                     ${document.querySelector("#newbook").value}   
                 <span/>
-            </div>
         `;
+        }
     }
 }
